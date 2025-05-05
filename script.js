@@ -11,6 +11,7 @@ document.getElementById("studentForm").addEventListener("submit",function(e){
 
     const grade=document.getElementById("grade").value.trim();
     
+    const fecha=document.getElementById("fecha").value.trim();
   
     
     if (grade < 1 || grade > 7 || !name || !lastName || isNaN(grade)){
