@@ -1,6 +1,7 @@
 const students=[];
 
 const tableBody=document.querySelector("#studentsTable tbody");
+const averageDiv=document.getElementById("average");
 
 document.getElementById("studentForm").addEventListener("submit",function(e){
     e.preventDefault();
@@ -13,14 +14,12 @@ document.getElementById("studentForm").addEventListener("submit",function(e){
     
     const fecha=document.getElementById("fecha").value.trim();
   
-    
     if (grade < 1 || grade > 7 || !name || !lastName || isNaN(grade)){
     alert("Error Datos incorrectos")
     return
     }
 
     //Guardar datos en el Array
-    
     const student={name,lastName,grade,fecha};
     students.push(student);
     addStudentToTable(student)
@@ -39,3 +38,29 @@ function addStudentToTable(student){
     <td>${student.fecha}</td>`;
     tableBody.appendChild(row);
 }
+suma=0
+
+/*function calcularPro(array) {
+    if (array.length === 0) {
+      return 0;
+    }
+    let suma = 0;
+    for (let i = 0; i < array.length; i++) {
+      suma += array[i];
+    }
+    const promedio = suma / array.length;
+    return promedio;
+  }
+*/
+  function calcularPromedio(){
+    if (students.length ===0) {
+        averageDiv.textContent="Promedio General del Curso: N/A"
+        return;
+    }
+    for (let i = 0; i < averageDiv.length; i++){
+        suma += averageDiv[i];}
+    const promedio = suma /averageDiv.length;
+    return promedio
+  }
+  console.log("El promedio es:", promedio);
+

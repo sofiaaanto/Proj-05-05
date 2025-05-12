@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #average {
+            margin: 16px 0;
+            padding: 10px;
+            background-color: aliceblue;
+            border: 2px solid blue;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: blue;
+        }
+    </style>
 </head>
+    
 <body>
     <h2>Notas Asignatura Front-End</h2>
+    <div id="average">Promedio general curso</div>
     <form id="studentForm">
         <div>
             <label for="name">Nombre</label>
@@ -25,6 +39,7 @@
             <input type="date" id="fecha" required>
         </div>
 
+
         <button type="submit">Guardar Estudiante</button>
     </form>
     <table id="studentsTable" border="1" cellpadding="8" cellspacing="0">
@@ -34,6 +49,7 @@
             <th>Apellido</th>
             <th>Nota</th>
             <th>fecha</th>
+            <th>Promedio</th>
         </tr>
     <tbody>
                 <!--Filas de datos -->
