@@ -1,7 +1,7 @@
 form{
     text-align: center;
     margin: auto;
-    border: 2px rgb(239, 4, 157) solid;
+    border: 2px rgb(0, 16, 243) solid;
     padding: 20px;
     width: 450px;
     border-radius: 20px;
@@ -16,15 +16,15 @@ h2{
 
 #average{
     text-align: center;
-    border: 2px rgb(255, 0, 208) solid;
-    color: rgb(255, 0, 238);
+    border: 2px rgb(30, 5, 255) solid;
+    color: rgb(32, 11, 253);
     width: 450px;
     margin: auto;
     padding: 10px;
     margin-bottom: 40px;
     margin-top: 40px;
     font-size: x-large;
-    background: rgba(226, 128, 222, 0.107);
+    background: rgba(150, 134, 255, 0.107);
 }
 
 input{
@@ -47,8 +47,8 @@ button{
     margin: 15px;
     display: flex;
     padding: 10px;
-    background: rgb(255, 0, 195);
-    color: white;
+    background: rgb(34, 120, 220);
+    color: rgb(255, 247, 247);
     border-radius: 10px;
 }
 
@@ -64,7 +64,7 @@ table{
 
 th{
     
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
     font-size: 20px;
     padding: 10px;
     width: 200px;
