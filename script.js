@@ -60,7 +60,7 @@ function calcularPromedio(){
         notas.push(parseInt(alumno.grade))
     }
     
-    const suma = notas.reduce((acumulador, valorActual) => acumulador + valorActual,0);
+    const suma = notas.reduce((acu, valorAct) => acu+ valorAct,0);
 
     let promedio = suma/students.length
     averageDiv.textContent=`Promedio de Calificaciones: ${promedio}`
