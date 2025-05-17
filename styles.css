@@ -1,11 +1,11 @@
 form{
     text-align: center;
     margin: auto;
-    border: 2px rgb(4, 20, 254) solid;
-    padding: 20px;
+    border: 2px rgb(44, 124, 236) solid;
+    padding: 25px;
     width: 450px;
     border-radius: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 h2{
@@ -16,8 +16,8 @@ h2{
 
 #average{
     text-align: center;
-    border: 2px rgb(30, 5, 255) solid;
-    color: rgb(32, 11, 253);
+    border: 2px rgb(11, 99, 239) solid;
+    color: rgb(0, 68, 254);
     width: 450px;
     margin: auto;
     padding: 10px;
@@ -44,11 +44,11 @@ label{
 }
 
 button{
-    margin: 15px;
+    margin: 10px;
     display: flex;
     padding: 10px;
-    background: rgb(34, 120, 220);
-    color: rgb(255, 247, 247);
+    background: rgb(11, 80, 160);
+    color: rgb(246, 246, 246);
     border-radius: 10px;
 }
 
@@ -72,7 +72,7 @@ th{
 }
 
 td{
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
     padding: 10px;
     width: 90px;
     font-size: 20px;

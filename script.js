@@ -15,7 +15,6 @@ document.getElementById("studentForm").addEventListener("submit",function(e){
 
     const grade = document.getElementById("grade").value.trim();
 
-    const date = document.getElementById("date").value.trim();
 
     if(grade <1 || grade>7 || !name || !lastName || isNaN(grade) ){
         alert("Error Datos Incorrectos")
@@ -24,7 +23,7 @@ document.getElementById("studentForm").addEventListener("submit",function(e){
 
     //guardar datos en el Array
 
-    const student ={name,lastName,grade,date};
+    const student ={name,lastName,grade};
     students.push(student);
 
     addStudentToTable(student)
@@ -42,8 +41,7 @@ function addStudentToTable(student){
     row.innerHTML=
     `<td>${student.name} </td>
     <td>${student.lastName} </td>
-    <td>${student.grade} </td>
-    <td>${student.date} </td>`
+    <td>${student.grade} </td>`
     ;
     tableBody.appendChild(row);
 }
@@ -57,7 +55,7 @@ function calcularPromedio(){
     
     for (let alumno of students){
         console.log(alumno)
-        notas.push(parseInt(alumno.grade))
+        notas.push(parseFloat(alumno.grade))
     }
     
     const suma = notas.reduce((acu, valorAct) => acu+ valorAct,0);
