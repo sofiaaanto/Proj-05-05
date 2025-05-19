@@ -15,6 +15,8 @@ document.getElementById("studentForm").addEventListener("submit",function(e){
 
     const grade = document.getElementById("grade").value.trim();
 
+    /*const delete= document.getElement */
+
 
     if(grade <1 || grade>7 || !name || !lastName || isNaN(grade) ){
         alert("Error Datos Incorrectos")
@@ -41,9 +43,34 @@ function addStudentToTable(student){
     row.innerHTML=
     `<td>${student.name} </td>
     <td>${student.lastName} </td>
-    <td>${student.grade} </td>`
+    <td>${student.grade} </td>
+    <td> <button class="delete">Eliminar</button></td>
+    <td> <button class="edit">Editar</button>>/td>`
     ;
-    tableBody.appendChild(row);
+
+row.querySelector(".delete").addEventListener("click", function(){
+    deleteEstudiante(student, row);
+
+});
+tableBody.appendChild(row);
+}
+
+function deleteEstudiante(student, row){
+    //busca el estudiante en el array
+    const index=students.indexOf(student);
+    if(index >-1){
+        students.splice(index,1);
+        row.remove();
+        calcularPromedio();
+    }
+}
+
+function editarEstudiante(student, row){
+    const index=students.indexOf(student);
+    if(index >-1){
+        students.splice(index, 1);
+        row.edi
+    }
 }
 
 function calcularPromedio(){
