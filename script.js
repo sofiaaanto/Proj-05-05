@@ -3,6 +3,7 @@ const students = [];
 
 const tableBody=document.querySelector("#studentsTable tbody")
 const averageDiv=document.getElementById("average");
+const totales = document.getElementById("totales");
 document.getElementById("studentForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -104,10 +105,36 @@ function calcularPromedio(){
         notas.push(parseFloat(alumno.grade))
     }
     
-    const suma = notas.reduce((acu, valorAct) => acu+ valorAct,0);
+    const suma = notas.reduce((acu, valorAct) => acu+ valorAct, 0);
 
     let promedio = suma/students.length
-    averageDiv.textContent=`Promedio de Calificaciones: ${promedio}` 
-}  
+    averageDiv.textContent=`Promedio de Calificaciones: ${promedio.toFixed(2)}` 
+
+
+
+    if (promedio >= 4) {
+        averageDiv.style.color = "green";
+    } else {
+        averageDiv.style.color = "red";
+    }
+
+    const repro = students.filter(s => s.grade < 4).length;
+    const apro = students.filter(s => s.grade >= 4).length;
+    const total = students.length;
+
+    totales.innerHTML = `
+        Total estudiantes: <b>${total} </b> <br>
+        Estudiantes Reprobados: <b>${repro} </b> <br>
+        Estudiantes Aprobados: <b>${apro} </b>
+    `;
+}
+
+function updateTable() {
+    tableBody.innerHTML = "";
+    students.forEach(student => {
+        addStudentToTable(student);
+    });
+}
+  
 
 

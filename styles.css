@@ -27,6 +27,19 @@ h2{
     background: rgba(150, 134, 255, 0.107);
 }
 
+#totales{
+    text-align: center;
+    border: 2px rgb(11, 99, 239) solid;
+    color: rgb(0, 68, 254);
+    width: 450px;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: x-large;
+    background: rgba(150, 134, 255, 0.107);
+}
+
 input{
     padding: 10px;
     display: block;
